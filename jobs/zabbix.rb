@@ -3,12 +3,12 @@ require 'json'
 require 'active_support/core_ext/numeric/time'
 
 ########################## PARAMETERS ##############################
-SERVER = "http://server/zabbix" # Zabbix server URL
-USER = "apiusr"                 # Zabbix user with API query rights
-PASSWORD = "password"           # Password
-MINPRIORITY = 2                 # Minimum priority level
-ANIMATE = 5.minutes             # New triggers animation delay
-QUERYDELAY = '30s'              # Zabbix API query delay  
+SERVER = "http://zabbix.tw" # Zabbix server URL
+USER = "api"                 # Zabbix user with API query rights
+PASSWORD = "Clo0goVEelwEs[kRvIgcH*CrzEtIl2a"           # Password
+MINPRIORITY = 1                 # Minimum priority level
+ANIMATE = 1.minutes             # New triggers animation delay
+QUERYDELAY = '10s'              # Zabbix API query delay  
 
 #########################################################
 # Zabbix groups to dashboard screens mapping :          #
@@ -16,8 +16,8 @@ QUERYDELAY = '30s'              # Zabbix API query delay
 # "Screen2" => [ "Zabbix group 3" ]                     #
 #########################################################
 SCREENS = {
-	"Production" => [ "Hypervisors", "Virtual Machines" ],
-        "Development" => [ "Zabbix servers" ]
+	"Prometheus" => [ "Prometheus" ],
+	"Infrastructure" => [ "Infrastructure" ]
 }
 
 
